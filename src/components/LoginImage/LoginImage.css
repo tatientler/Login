@@ -16,5 +16,6 @@
 @media screen and (max-width: 640px) {
     .img {
         background-image: url('./img/img_sm.svg');
+        height: 205px;
     }
 }

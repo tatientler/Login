@@ -23,11 +23,13 @@ export const LoginWrapper = styled.div`
 
     @media screen and (max-width: 940px) {
         width: 425px;
+        gap: 50px;
     }
 
     @media screen and (max-width: 640px) {
         gap: 38px;
-        height: 746px;
+        height: auto;
+        min-height: 540px;
         padding: 0px;
         width: auto;
         min-width: 360px;
