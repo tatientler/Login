@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useField } from "@unform/core";
-import { Wrapper } from "./Input.styled";
+import { InputWrapper } from "./Input.styled";
 
 export function Input({ name, label, ...rest }) {
     const inputRef = useRef(null);
@@ -16,7 +16,7 @@ export function Input({ name, label, ...rest }) {
     }, [fieldName, registerField]);
 
     return (
-        <Wrapper>
+        <InputWrapper>
             {label && <label htmlFor={fieldName}>{label}</label>}
 
             <input
@@ -27,6 +27,6 @@ export function Input({ name, label, ...rest }) {
             />
 
             {error && <span style={{ color: "#f00" }}>{error}</span>}
-        </Wrapper>
+        </InputWrapper>
     );
 }

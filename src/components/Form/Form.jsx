@@ -1,12 +1,13 @@
 import { useRef } from 'react';
 import { Form } from '@unform/web'
-import { Input } from './Input/Input'
+import { Input } from '../Input/Input'
+import { FormStyled } from './Form.styled';
 
 export function LoginForm() {
     const formRef = useRef(null)
 
     function handleSubmit(data, { reset }) {
-        if(data.name === '') {
+        if (data.name === '') {
             formRef.current.setErros({
                 email: 'O e-mail é obrigatório',
                 password: 'A senha é obrigatória'
@@ -17,15 +18,16 @@ export function LoginForm() {
         reset();
     }
 
-    const primeira = "Login"
-    const segunda = " *"
+    const special = '*'
 
     return (
-        <Form ref={formRef} onSubmit={handleSubmit}>
-            <Input name='email' type='email' label={primeira + segunda}  placeholder='Digite seu e-mail aqui' />
-            <Input name='password' type='email' label='Senha *' placeholder='************' />
+        <FormStyled>
+            <Form ref={formRef} onSubmit={handleSubmit}>
+                <Input name='email' type='email' label={`Login ${special}`} placeholder='Digite seu e-mail aqui' />
 
-            <button type='submit'>Save</button>
-        </Form>
+                <Input name='password' type='email' label={`Senha ${special}`} placeholder='************' />
+
+            </Form>
+        </FormStyled>
     )
 }
