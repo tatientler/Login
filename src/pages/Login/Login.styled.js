@@ -4,6 +4,10 @@ export const Container = styled.div`
     background-color: #000;
     display: flex;
     margin: 0 auto;
+
+    @media screen and (max-width: 640px) {
+        flex-direction: column-reverse;
+    }
 `
 
 export const LoginWrapper = styled.div`
@@ -16,7 +20,20 @@ export const LoginWrapper = styled.div`
     justify-content: center;
     padding: 10px 50px;
     width: 529px;
+
+    @media screen and (max-width: 940px) {
+        width: 425px;
+    }
+
+    @media screen and (max-width: 640px) {
+        gap: 38px;
+        height: 746px;
+        padding: 0px;
+        width: auto;
+        min-width: 360px;
+    }
 `
+
 export const TitleWrapper = styled.div`
     align-items: center;
     color: #4C5980;
@@ -25,6 +42,17 @@ export const TitleWrapper = styled.div`
     height: 86px;
     padding: 0px 60px;
     width: 429px;
+
+    @media screen and (max-width: 940px) {
+        height: 80px;
+        width: 325px;
+    }
+
+    @media screen and (max-width: 640px) {
+        height: 69px;
+        padding: 0px;
+        width: 306px;
+    }
     
     h1 {
         font-size: 36px;
@@ -33,6 +61,11 @@ export const TitleWrapper = styled.div`
         line-height: 38px;
         text-align: center;
         text-transform: uppercase;
+
+        @media screen and (max-width: 640px) {
+            font-size: 24px;
+            line-height: 33px;
+        }
     }
 
     p {
@@ -42,6 +75,11 @@ export const TitleWrapper = styled.div`
         line-height: 24px;
         text-align: center;
         width: 309px;
+
+        @media screen and (max-width: 640px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
     }
 
 `
@@ -56,6 +94,12 @@ export const FormWrapper = styled.div`
     padding: 0px 60px;
     width: 429px;
 
+    @media screen and (max-width: 940px) {
+        height: 272px;
+        padding: 0px 40px;
+        width: 325px;
+    }
+
     p {
         align-items: center;
         color: #4C5980;
@@ -64,5 +108,9 @@ export const FormWrapper = styled.div`
         font-weight: 400;
         line-height: 15px;
         text-align: center;
+
+        @media screen and (max-width: 640px) {
+            font-size: 11px;
+        }
     }
 `

@@ -18,14 +18,12 @@ export function LoginForm() {
         reset();
     }
 
-    const special = '*'
-
     return (
         <FormStyled>
             <Form ref={formRef} onSubmit={handleSubmit}>
-                <Input name='email' type='email' label={`Login ${special}`} placeholder='Digite seu e-mail aqui' />
+                <Input name='email' type='email' label={'Login'} placeholder='Digite seu e-mail aqui' />
 
-                <Input name='password' type='email' label={`Senha ${special}`} placeholder='************' />
+                <Input name='password' type='email' label={'Senha'} placeholder='************' />
 
             </Form>
         </FormStyled>

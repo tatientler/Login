@@ -21,4 +21,10 @@ export const InputWrapper = styled.div`
         padding: 8px 16px;
         width: 309px;
     }
+    
+    label::after {
+        content: ' *';
+        color: red;
+        }
+    
 `

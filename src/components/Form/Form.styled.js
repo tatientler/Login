@@ -8,4 +8,8 @@ export const FormStyled = styled.form`
     height: 261px;
     padding: 0px;
     width: 309px;
+
+    @media screen and (max-width: 640px) {
+        height: 154px;
+    }
 `

@@ -2,6 +2,7 @@ import { LoginForm } from '../../components/Form/Form'
 import { Container, FormWrapper, LoginWrapper, TitleWrapper } from './Login.styled'
 import { BtnYellow } from '../../components/Button/ButtonYellow/BtnYellow'
 import { BtnBlue } from '../../components/Button/ButtonBlue/BtnBlue'
+import { LoginImage } from '../../components/LoginImage/LoginImage'
 
 export function Login() {
     return (
@@ -23,6 +24,9 @@ export function Login() {
                 </FormWrapper>
 
             </LoginWrapper>
+
+            <LoginImage />
+
         </Container>
     )
 }

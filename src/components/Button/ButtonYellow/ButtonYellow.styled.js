@@ -16,4 +16,11 @@ export const ButtonYellow = styled.button`
     line-height: 24px;
     padding: 8px 16px;
     width: 309px;
+
+    @media screen and (max-width: 640px) {
+        font-size: 14px;
+        height: 33px;
+        line-height: 21px;
+        padding: 6px 14px;
+    }
 `
