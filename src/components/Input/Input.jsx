@@ -9,15 +9,17 @@ import { InputGroup, StyledInput } from "./Input.styled";
 export function Input({ name, label, backgroundColor, borderColor, showEyeSlash, ...rest }) {
     const inputRef = useRef(null);
 
-    const { fieldName, defaultValue = "", registerField, error } = useField(name);
+    const { fieldName, defaultValue = "", registerField, error, clearError } = useField(name);
 
     useEffect(() => {
         registerField({
             name: fieldName,
             ref: inputRef.current,
             path: "value"
-        });
-    }, [fieldName, registerField]);
+        })
+    },
+        changeBorderColor(), [fieldName, registerField]);
+
 
     function toggleShowPassword(e) {
         const inputTypeClickedElement = e.target.previousElementSibling.type
@@ -31,6 +33,12 @@ export function Input({ name, label, backgroundColor, borderColor, showEyeSlash,
         }
     }
 
+    function changeBorderColor() {
+        if (error) {
+            borderColor = '#DC4242'
+        }
+    }
+
     return (
         <StyledInput
             backgroundColor={backgroundColor}
@@ -38,18 +46,19 @@ export function Input({ name, label, backgroundColor, borderColor, showEyeSlash,
         >
             {label && <label htmlFor={fieldName}>{label}</label>}
 
-                <InputGroup>
-                    <input
-                        ref={inputRef}
-                        id={fieldName}
-                        defaultValue={defaultValue}
-                        {...rest}
-                    />
-                    
-                    {showEyeSlash && <img src={EyeSlashIcon} alt='EyeSlash' onClick={toggleShowPassword}/>}
-                </InputGroup>
+            <InputGroup>
+                <input
+                    ref={inputRef}
+                    id={fieldName}
+                    defaultValue={defaultValue}
+                    onChange={clearError}
+                    {...rest}
+                />
 
-            {error && <span style={{ color: "#f00" }}>{error}</span>}
+                {showEyeSlash && <img src={EyeSlashIcon} alt='EyeSlash' onClick={toggleShowPassword} />}
+            </InputGroup>
+
+            {error && <span>{error}</span>}
         </StyledInput>
     );
 }

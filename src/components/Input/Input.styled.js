@@ -27,6 +27,14 @@ export const StyledInput = styled.div`
         content: ' *';
         color: red;
     }
+
+    span {
+        color: #DC4242;
+        font-size: 12px;
+        gap: 10px;
+        line-height: 15px;
+        padding: 4px 4px 0px;
+    }
 `
 
 export const InputGroup = styled.div`

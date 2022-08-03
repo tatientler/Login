@@ -7,11 +7,14 @@ import { StyledForm } from './Form.styled';
 
 export function LoginForm() {
     const formRef = useRef(null)
+    
 
     function handleSubmit(data, { reset }) {
+        console.log(data)
+
         if (data.email === '') {
             formRef.current.setErrors({
-                email: 'Campo obrigatório!',
+                email: 'Campo obrigatório!'
             })
         } 
         if (data.password === '') {
@@ -19,7 +22,7 @@ export function LoginForm() {
                 password: 'Campo obrigatório!'
             })
         }
-        if (data.email === '' && data.password === '') {
+        if (data.email === '' && data.password === '' ) {
             formRef.current.setErrors({
                 email: 'Campo obrigatório!',
                 password: 'Campo obrigatório!'
