@@ -22,14 +22,13 @@ export const LoginWrapper = styled.div`
     width: 529px;
 
     @media screen and (max-width: 940px) {
-        gap: 50px;
         width: 425px;
     }
 
     @media screen and (max-width: 640px) {
         gap: 38px;
         height: auto;
-        min-height: 540px;
+        min-height: 437px;
         min-width: 360px;
         padding: 0px;
         width: auto;
@@ -47,6 +46,7 @@ export const TitleWrapper = styled.div`
 
     @media screen and (max-width: 940px) {
         height: 80px;
+        padding: 0px;
         width: 325px;
     }
 
@@ -63,6 +63,10 @@ export const TitleWrapper = styled.div`
         text-align: center;
         text-transform: uppercase;
 
+        @media screen and (max-width: 940px) {
+            font-size: 34px;
+        }
+
         @media screen and (max-width: 640px) {
             font-size: 24px;
             line-height: 33px;
@@ -77,8 +81,15 @@ export const TitleWrapper = styled.div`
         text-align: center;
         width: 309px;
 
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 940px) {
             font-size: 14px;
+            height: 42px;
+            line-height: 21px;
+            width: 325px;
+        }
+
+        @media screen and (max-width: 640px) {
+            font-size: 13px;
             line-height: 18px;
         }
     }
@@ -108,11 +119,17 @@ export const FormWrapper = styled.div`
         display: flex;
         font-size: 12px;
         font-weight: 400;
+        height: 15px;
         line-height: 15px;
         text-align: center;
 
+        @media screen and (max-width: 940px) {
+            font-size: 10px;
+            line-height: 12px;
+        }
+
         @media screen and (max-width: 640px) {
-            font-size: 11px;
+            font-size: 12px;
         }
     }
 `

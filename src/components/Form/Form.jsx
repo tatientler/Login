@@ -8,7 +8,6 @@ import { StyledForm } from './Form.styled';
 export function LoginForm() {
     const formRef = useRef(null)
     
-
     function handleSubmit(data, { reset }) {
         console.log(data)
 
@@ -63,6 +62,5 @@ export function LoginForm() {
             />
 
         </StyledForm>
-
     )
 }

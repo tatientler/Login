@@ -1,6 +1,6 @@
 import { Button } from '../../components/Button/Button'
 import { LoginForm } from '../../components/Form/Form'
-import { LoginImage } from '../../components/LoginImage/LoginImage'
+import { LoginBgImage } from '../../components/LoginBgImage/LoginBgImage'
 
 import { Container, FormWrapper, LoginWrapper, TitleWrapper } from './Login.styled'
 
@@ -14,9 +14,7 @@ export function Login() {
                 </TitleWrapper>
 
                 <FormWrapper>
-
                     <LoginForm />
-
                     <p>Esqueci minha senha</p>
 
                     <Button 
@@ -25,12 +23,10 @@ export function Login() {
                         color={'#63719D'}
                         text={'CADASTRE-SE'} 
                     />
-
                 </FormWrapper>
-
             </LoginWrapper>
 
-            <LoginImage />
+            <LoginBgImage />
 
         </Container>
     )

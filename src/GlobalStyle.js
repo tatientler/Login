@@ -21,5 +21,4 @@ export const GlobalStyle = createGlobalStyle`
         background-color: #FFC44C;    
         border-radius: 20px;       
     }
-
 `

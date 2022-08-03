@@ -1,0 +1,21 @@
+.loginBgImage {
+    background-image: url('/public/assets/loginBgImage/loginBgImage_lg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+}
+
+@media screen and (max-width: 940px) {
+    .loginBgImage {
+        background-image: url('/public/assets/loginBgImage/loginBgImage_md.svg');
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .loginBgImage {
+        background-image: url('/public/assets/loginBgImage/loginBgImage_sm.svg');
+        height: 203px;
+    }
+}

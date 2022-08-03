@@ -8,6 +8,11 @@ export const StyledInput = styled.div`
     padding: 0px;
     width: 309px;
 
+    @media screen and (max-width: 940px) {
+        height: 76px;
+        width: 245px;
+    }
+
     input {
         align-items: center;
         background-color: ${(props) => props.backgroundColor ? props.backgroundColor : ''};
@@ -21,6 +26,12 @@ export const StyledInput = styled.div`
         outline: none;
         padding: 8px 16px;
         width: 309px;
+
+        @media screen and (max-width: 940px) {
+            height: 33px;
+            padding: 6px 12px;
+            width: 245px;
+        }
     }
 
     label::after {
@@ -44,7 +55,7 @@ export const InputGroup = styled.div`
 
     img {
         position: absolute;
-        right: 15px;
-        top: 13px;
+        right: 9px;
+        top: 11px;
     }
 `

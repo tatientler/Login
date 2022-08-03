@@ -11,14 +11,13 @@ export function Input({ name, label, backgroundColor, borderColor, showEyeSlash,
 
     const { fieldName, defaultValue = "", registerField, error, clearError } = useField(name);
 
-    useEffect(() => {
+    useEffect(() => { 
         registerField({
             name: fieldName,
             ref: inputRef.current,
             path: "value"
-        })
-    },
-        changeBorderColor(), [fieldName, registerField]);
+        });
+    }, [fieldName, registerField], changeInputBorderColor())
 
 
     function toggleShowPassword(e) {
@@ -33,7 +32,7 @@ export function Input({ name, label, backgroundColor, borderColor, showEyeSlash,
         }
     }
 
-    function changeBorderColor() {
+    function changeInputBorderColor() {
         if (error) {
             borderColor = '#DC4242'
         }

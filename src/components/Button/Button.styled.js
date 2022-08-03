@@ -11,17 +11,18 @@ export const StyledButton = styled.button`
     flex-direction: row;
     font-size: 16px;
     font-weight: 700;
-    gap: 10px;
+    gap: 4px;
     height: 40px;
     justify-content: center;
     line-height: 24px;
     padding: 8px 16px;
     width: 309px;
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 940px) {
         font-size: 14px;
         height: 33px;
         line-height: 21px;
         padding: 6px 14px;
+        width: 245px;
     }
 `
