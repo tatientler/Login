@@ -22,17 +22,17 @@ export const LoginWrapper = styled.div`
     width: 529px;
 
     @media screen and (max-width: 940px) {
-        width: 425px;
         gap: 50px;
+        width: 425px;
     }
 
     @media screen and (max-width: 640px) {
         gap: 38px;
         height: auto;
         min-height: 540px;
+        min-width: 360px;
         padding: 0px;
         width: auto;
-        min-width: 360px;
     }
 `
 
@@ -59,7 +59,6 @@ export const TitleWrapper = styled.div`
     h1 {
         font-size: 36px;
         font-weight: 700;
-        font-size: 36px;
         line-height: 38px;
         text-align: center;
         text-transform: uppercase;
@@ -71,8 +70,8 @@ export const TitleWrapper = styled.div`
     }
 
     p {
-        font-weight: 400;
         font-size: 16px;
+        font-weight: 400;
         height: 48px;
         line-height: 24px;
         text-align: center;
@@ -105,6 +104,7 @@ export const FormWrapper = styled.div`
     p {
         align-items: center;
         color: #4C5980;
+        cursor: pointer;
         display: flex;
         font-size: 12px;
         font-weight: 400;

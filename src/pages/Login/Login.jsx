@@ -1,8 +1,8 @@
+import { Button } from '../../components/Button/Button'
 import { LoginForm } from '../../components/Form/Form'
-import { Container, FormWrapper, LoginWrapper, TitleWrapper } from './Login.styled'
-import { BtnYellow } from '../../components/Button/ButtonYellow/BtnYellow'
-import { BtnBlue } from '../../components/Button/ButtonBlue/BtnBlue'
 import { LoginImage } from '../../components/LoginImage/LoginImage'
+
+import { Container, FormWrapper, LoginWrapper, TitleWrapper } from './Login.styled'
 
 export function Login() {
     return (
@@ -14,13 +14,18 @@ export function Login() {
                 </TitleWrapper>
 
                 <FormWrapper>
-                    <LoginForm />
 
-                    <BtnYellow text={'ENTRAR >'} />
+                    <LoginForm />
 
                     <p>Esqueci minha senha</p>
 
-                    <BtnBlue text={'CADASTRE-SE'} />
+                    <Button 
+                        backgroundColor={'#D6D6D6'} 
+                        borderColor={'#63719D'}
+                        color={'#63719D'}
+                        text={'CADASTRE-SE'} 
+                    />
+
                 </FormWrapper>
 
             </LoginWrapper>

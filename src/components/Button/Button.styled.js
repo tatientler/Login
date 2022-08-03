@@ -1,15 +1,16 @@
 import styled from 'styled-components'
 
-export const ButtonBlue = styled.button`
+export const StyledButton = styled.button`
     align-items: center;
-    background: #D6D6D6;
-    border: 2px solid #63719D;
+    background-color: ${(props) => props.backgroundColor ? props.backgroundColor : ''};
+    border: ${(props) => props.borderColor ? "2px solid " + props.borderColor : '0px'};
     border-radius: 100px;
-    color: #63719D;
+    color: ${(props) => props.color ? props.color : ''};
+    cursor: pointer;
     display: flex;
     flex-direction: row;
-    font-weight: 700;
     font-size: 16px;
+    font-weight: 700;
     gap: 10px;
     height: 40px;
     justify-content: center;

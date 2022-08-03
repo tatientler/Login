@@ -1,5 +1,5 @@
 .img {
-    background-image: url('./img/img_lg.svg');
+    background-image: url('/public/assets/loginImage/img_lg.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,13 +9,13 @@
 
 @media screen and (max-width: 940px) {
     .img {
-        background-image: url('./img/img_md.svg');
+        background-image: url('/public/assets/loginImage/img_md.svg');
     }
 }
 
 @media screen and (max-width: 640px) {
     .img {
-        background-image: url('./img/img_sm.svg');
+        background-image: url('/public/assets/loginImage/img_sm.svg');
         height: 205px;
     }
 }

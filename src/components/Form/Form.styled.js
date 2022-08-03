@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { Form as Unform } from '@unform/web'
 
-export const FormStyled = styled.form`
+export const StyledForm = styled(Unform)`
     align-items: flex-start;
     display: flex;
     flex-direction: column;

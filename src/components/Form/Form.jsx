@@ -1,31 +1,65 @@
 import { useRef } from 'react';
-import { Form } from '@unform/web'
+
+import { Button } from '../Button/Button';
 import { Input } from '../Input/Input'
-import { FormStyled } from './Form.styled';
+
+import { StyledForm } from './Form.styled';
 
 export function LoginForm() {
     const formRef = useRef(null)
 
     function handleSubmit(data, { reset }) {
-        if (data.name === '') {
-            formRef.current.setErros({
-                email: 'O e-mail é obrigatório',
-                password: 'A senha é obrigatória'
+        if (data.email === '') {
+            formRef.current.setErrors({
+                email: 'Campo obrigatório!',
+            })
+        } 
+        if (data.password === '') {
+            formRef.current.setErrors({
+                password: 'Campo obrigatório!'
             })
         }
-        console.log(data);
+        if (data.email === '' && data.password === '') {
+            formRef.current.setErrors({
+                email: 'Campo obrigatório!',
+                password: 'Campo obrigatório!'
+            })
+        }
 
-        reset();
+        reset();  
     }
 
     return (
-        <FormStyled>
-            <Form ref={formRef} onSubmit={handleSubmit}>
-                <Input name='email' type='email' label={'Login'} placeholder='Digite seu e-mail aqui' />
+        <StyledForm ref={formRef} onSubmit={handleSubmit}>
 
-                <Input name='password' type='email' label={'Senha'} placeholder='************' />
+            <Input
+                name='email'
+                type='email'
+                label='Login'
+                placeholder='Digite seu e-mail aqui'
+                backgroundColor={'#FAFAFA'}
+                borderColor={'#ADADAD'}
+            />
 
-            </Form>
-        </FormStyled>
+            <Input
+                name='password'
+                type='password'
+                label='Senha'
+                placeholder='*****************'
+                backgroundColor={'#FAFAFA'}
+                borderColor={'#ADADAD'}
+                showEyeSlash={true}
+            />
+
+            <Button
+                backgroundColor={'#FFD175'}
+                borderColor={'#FFD175'}
+                color={'#323133'}
+                text={'ENTRAR >'}
+                type='submit'
+            />
+
+        </StyledForm>
+
     )
 }
