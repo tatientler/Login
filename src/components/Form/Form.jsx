@@ -58,7 +58,6 @@ export function LoginForm() {
                 borderColor={'#FFD175'}
                 color={'#323133'}
                 text={'ENTRAR >'}
-                type='submit'
             />
 
         </StyledForm>
