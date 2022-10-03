@@ -57,5 +57,9 @@ export const InputGroup = styled.div`
         position: absolute;
         right: 9px;
         top: 11px;
+
+        @media screen and (min-width: 940px) {
+            top: 15px;
+        }
     }
 `
